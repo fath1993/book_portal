@@ -1,7 +1,9 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DRIVER_PATH = os.path.join(BASE_DIR, "chromedriver/chromedriver")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -10,6 +12,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
+    'logger',
+    'robots',
+    'bookshelf',
+    'gallery',
 ]
 
 MIDDLEWARE = [
