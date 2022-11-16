@@ -6,18 +6,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DRIVER_PATH = os.path.join(BASE_DIR, "chromedriver/chromedriver")
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'fontawesomefree',
     'tinymce',
+    'accounts',
     'logger',
     'robots',
     'bookshelf',
     'gallery',
+    'contact',
+    'website',
 ]
+
+# admin_interface required settings
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,9 +77,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa-IR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
